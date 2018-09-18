@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>天气app</title>
+	<script src="js/jquery-3.3.1.js"></script>
+	<link rel="stylesheet" href="http://at.alicdn.com/t/font_838842_k3q0cunef1.css">
+	<link rel="stylesheet" href="css/swiper-4.3.5.min.css">
+	<link rel="stylesheet" href="css/sjcc.css">
+	<meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no" >
+	<script src="js/tianqi.js"></script>
+	<link rel="stylesheet" href="css/tianqi.css">
+</head>
+<body>
+	<div class="heda">
+		<div class="heda-left">
+			腾讯天气
+		</div>
+		<div class="heda-right">
+			<img src="img/tian.png" alt="">
+		</div>
+	</div>
+	<div class="banner">
+		<div class="banner-yi">
+		<i class="iconfont icon-weizhi weizhi"></i><i class="city"></i>
+		</div><div class="banner-yi2">
+		<img src="img/tu.png" alt="">
+		</div>
+		<div class="banner-er">
+		空气
+		<div class="wuran">轻度污染</div>
+		</div>
+		<div class="banner-san">
+		<div class="du"></div>
+		<p>°</p>
+		</div>
+		<div class="banner-si">
+		晴
+		</div>
+		<div class="banner-wu">
+		湿度 <span>28%</span>
+		</div>
+		<div class="banner-liu">
+		天冷了，注意保暖
+		</div>
+	
+		<div class="banner-pic"></div>
+		</div>
+	<div class="nr">
+		<div class="nr1">
+		<div class="nr1-left">
+			<ul>
+				<li>今天</li>
+				<li><i class="top"></i>/<i class="low"></i>°C</li>
+				<li class="condition"></li>
+				<li class="tu now">
+					
+				</li>
+			</ul>
+
+		</div>
+		<div class="nr1-right">
+			<ul>
+				<li>明天</li>
+				<li><i class="top1"></i>/<i class="low1"></i>°C</li>
+				<li class="condition"></li>
+				<li class="tu next">
+					
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="nr2">
+		<ul>
+			<li>
+				<!-- <div class="time">12:00</div>
+				<div class="tu"></div>
+				<div class="wendu">-1°</div>
+			</li>
+			<li>
+				<div class="time">13:00</div>
+				<div class="tu"></div>
+				<div class="wendu">-1°</div>
+			</li>
+			<li>
+				<div class="time">14:00</div>
+				<div class="tu"></div>
+				<div class="wendu">-1°</div>
+			</li>
+			<li>
+				<div class="time">15:00</div>
+				<div class="tu"></div>
+				<div class="wendu">-1°</div>
+			</li>
+			<li>
+				<div class="time">16:00</div>
+				<div class="tu"></div>
+				<div class="wendu">-1°</div>
+			</li>
+			<li>
+				<div class="time">17:00</div>
+				<div class="tu"></div>
+				<div class="wendu">-1°</div>
+			</li>
+			<li>
+				<div class="time">18:00</div>
+				<div class="tu"></div>
+				<div class="wendu">-1°</div>
+			</li>
+			<li>
+				<div class="time">19:00</div>
+				<div class="tu"></div>
+				<div class="wendu">-1°</div>
+			</li>
+			<li>
+				<div class="time">20:00</div>
+				<div class="tu"></div>
+				<div class="wendu">-1°</div>
+			</li>
+			<li>
+				<div class="time">21:00</div>
+				<div class="tu"></div>
+				<div class="wendu">-1°</div>
+			</li>
+			<li>
+				<div class="time">22:00</div>
+				<div class="tu"></div>
+				<div class="wendu">-1°</div>
+			</li> -->
+		</ul>
+	</div>
+		
+	<div class="nr3">
+		<ul class="feng">
+		<li>
+			<span>昨天</span>
+			<span>今天</span>
+			<span>明天</span>
+			<span>后天</span>
+			<span>周五</span>
+			<span>周六</span>
+		</li>
+			<!-- <li>
+				<span>昨天</span>
+				<div class="day">01/15</div>
+				<div class="zhuangkuang1">多云</div>
+				<div class="tu1"></div>
+				<div class="wendu1">1°</div>
+				<div class="wendu2">-5°</div>
+				<div class="tu2"></div>
+				<div class="zhuangkuang2">多云</div>
+				<div class="feng2">西北风</div>
+				<div class="ji">3级</div>
+			</li>
+			<li>
+				<span>今天</span>
+				<div class="day">01/15</div>
+				<div class="zhuangkuang1">多云</div>
+				<div class="tu1"></div>
+				<div class="wendu1">1°</div>
+				<div class="wendu2">-5°</div>
+				<div class="tu2"></div>
+				<div class="zhuangkuang2">多云</div>
+				<div class="feng2">西北风</div>
+				<div class="ji"></div>
+			</li>3级
+			<li>
+				<span>明天</span>
+				<div class="day">01/15</div>
+				<div class="zhuangkuang1">多云</div>
+				<div class="tu1"></div>
+				<div class="wendu1">1°</div>
+				<div class="wendu2">-5°</div>
+				<div class="tu2"></div>
+				<div class="zhuangkuang2">多云</div>
+				<div class="feng2">西北风</div>
+				<div class="ji">3级</div>
+			</li>
+			<li>
+				<span>后天</span>
+				<div class="day">01/15</div>
+				<div class="zhuangkuang1">多云</div>
+				<div class="tu1"></div>
+				<div class="wendu1">1°</div>
+				<div class="wendu2">-5°</div>
+				<div class="tu2"></div>
+				<div class="zhuangkuang2">多云</div>
+				<div class="feng2">西北风</div>
+				<div class="ji">3级</div>
+			</li>
+			<li>
+				<span>周五</span>
+				<div class="day">01/15</div>
+				<div class="zhuangkuang1">多云</div>
+				<div class="tu1"></div>
+				<div class="wendu1">1°</div>
+				<div class="wendu2">-5°</div>
+				<div class="tu2"></div>
+				<div class="zhuangkuang2">多云</div>
+				<div class="feng2">西北风</div>
+				<div class="ji">3级</div>
+			</li>
+			<li>
+				<span>周六</span>
+				<div class="day">01/15</div>
+				<div class="zhuangkuang1">多云</div>
+				<div class="tu1"></div>
+				<div class="wendu1">1°</div>
+				<div class="wendu2">-5°</div>
+				<div class="tu2"></div>
+				<div class="zhuangkuang2">多云</div>
+				<div class="feng2">西北风</div>
+				<div class="ji">3级</div>
+			</li> -->
+		</ul>
+	</div>
+	<div class="nr4">
+		<ul>
+			<li>
+				<div class="nr4-pic">
+					<img src="img/a.png" alt="">
+				</div>
+				<pre>不带伞</pre>
+				<p>雨伞</p>
+			</li>
+			<li>
+				<div class="nr4-pic">
+					<img src="img/b.png" alt="">
+				</div>
+				<pre>冷</pre>
+				<p>穿衣</p>
+			</li>
+			<li>
+				<div class="nr4-pic">
+					<img src="img/c.png" alt="">
+				</div>
+				<pre>较弱</pre>
+				<p>防晒</p>
+			</li>
+			<li>
+				<div class="nr4-pic">
+					<img src="img/d.png" alt="">
+				</div>
+				<pre>较宜发</pre>
+				<p>感冒</p>
+			</li>
+			<li>
+				<div class="nr4-pic">
+					<img src="img/e.png" alt="">
+				</div>
+				<pre>较不宜</pre>
+				<p>运动</p>
+			</li>
+			<li>
+				<div class="nr4-pic">
+					<img src="img/f.png" alt="">
+				</div>
+				<pre>较适宜</pre>
+				<p>洗车</p>
+			</li>
+			<li>
+				<div class="nr4-pic">
+					<img src="img/g.png" alt="">
+				</div>
+				<pre>不宜</pre>
+				<p>钓鱼</p>
+			</li>
+			<li>
+				<div class="nr4-pic">
+					<img src="img/o.png" alt="">
+				</div>
+				<pre>良好</pre>
+				<p>交通</p>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class="dibu">
+	数据又源于中国天气网
+</div>
+</body>
+</html>
+<!-- wampserver -->
+<!-- vc++ -->
